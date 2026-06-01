@@ -3,14 +3,14 @@ import time
 #narrativa inicial
 def run_case1(): 
     print("O banco recebeu diversos relatos de clientes afirmando que seus saldos desapareciam após operações de depósito e saque...")
-    time.sleep(2)
+    time.sleep(3)
     print("Os valores pareciam ser redefinidos de forma inesperada, comprometendo a integridade do sistema financeiro...")
-    time.sleep(2)
-    print(" Sua missão é investigar o código e identificar o bug responsável pelo desaparecimento dos saldos...")
-    time.sleep(2)
+    time.sleep(3)
+    print("Sua missão é investigar o código e identificar o bug responsável pelo desaparecimento dos saldos...")
+    time.sleep(4)
 
     #código bugado
-    codigo_bugado1 = """ 
+    codigo_bugado1 = """Código Bugado para análise:
     saldo_inicial = 100
     valor_deposito = 50
 
@@ -22,18 +22,22 @@ def run_case1():
 
     print("Saldo após depósito:", resultado)
     """
+
+    #output/comportamento observado
     output = "Saldo após depósito: 50"
 
     print(codigo_bugado1)
-    time.sleep(1)
+    time.sleep(2)
     print(output)
+    time.sleep(3)
 
-    #menu de investigação
+    #investigações
     menu_case1 = """ Menu de Pistas
     1. Analisar variável saldo  
     2. Testar depósito
     """ 
-    #receber escolha de investigação
+
+    #diagnóstico
     investigacao = 0
     while investigacao < 2:
         print(menu_case1)
@@ -47,14 +51,16 @@ def run_case1():
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")
 
-    #decisão final 
+    #resultado final
     menu_decisao_final = """
     1. A variável saldo está sendo reinicializada dentro da função
     2. O sistema está exibindo o resultado incorretamente
 
     """
+
     print(menu_decisao_final)
-    #retorno do resultado 
+
+    
     decisao_final = input("Qual é a causa do bug? ")
     if decisao_final == "1":
         print("Correto! A variável saldo está sendo reinicializada dentro da função, o que faz com que o valor anterior seja perdido.")
