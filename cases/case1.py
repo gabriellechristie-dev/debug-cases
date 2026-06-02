@@ -24,8 +24,9 @@ def run_case1():
     """
 
     #output/comportamento observado
-    output = "Saldo após depósito: 50"
-
+    output = """ Output/comportamento observado:
+    "Saldo após depósito: 50"
+    """
     print(codigo_bugado1)
     time.sleep(2)
     print(output)

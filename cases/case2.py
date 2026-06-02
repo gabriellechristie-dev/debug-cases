@@ -2,6 +2,8 @@ import time
 
 #narrativa inicial: loop infinito
 def run_case2():
+    print("Iniciando investigação do caso 2...")
+    time.sleep(3)
     print("Uma empresa relatou que o sistema de processamento de pedidos ficou preso executando indefinidamente...")
     time.sleep(3)
     print("Os pedidos deveriam ser processados e o programa encerrado após concluir o trabalho...")
@@ -24,7 +26,7 @@ def run_case2():
     """
 
     #output/comportamento observado
-    output = """
+    output = """ Output/comportamento observado:
     Digite o número do pedido que deseja processar: 101
     Pedido processado com sucesso
 
@@ -64,8 +66,22 @@ def run_case2():
 
 
     #resultado final
-    menu_decisao_final = """
+    menu_decisao_final2 = """
     1. O contador de pedidos não está sendo atualizado corretamente
-    2. 
+    2. A condição do while está escrita incorretamente.
 
     """
+
+    print(menu_decisao_final2)
+
+
+    decisao_final2 = input("Qual é a causa do bug? ")
+    if decisao_final2 == "1":
+        print("Correto! O contador de pedidos não está sendo atualizado durante a execução. Como seu valor permanece 0, a condição de parada nunca é alcançada e o loop continua indefinidamente.")
+        return True
+    elif decisao_final2 == "2":
+        print("Incorreto. A condição do while está escrita corretamente. O problema é que a variável utilizada na condição não é atualizada durante a execução.")
+        return False
+    else:   
+        print("Opção inválida. Por favor, escolha uma opção válida.")
+        return False
