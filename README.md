@@ -1,5 +1,5 @@
 
-# Debug Files
+# Debug Cases
 
 Jogo investigativo em CLI onde cada caso representa uma fase.
 
