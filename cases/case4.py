@@ -51,6 +51,7 @@ def run_case4():
     1. Verificar quantidade de alunos cadastrados
     2. Analisar lista após a atualização
     """ 
+
 #diagnóstico
     investigacao = 0
     while investigacao < 2:
@@ -64,8 +65,6 @@ def run_case4():
             investigacao += 1
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")
-
-
 
 #resultado final
 

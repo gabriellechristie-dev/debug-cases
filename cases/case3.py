@@ -1,6 +1,6 @@
 import time
 
-#narrativa inicial:
+#narrativa inicial
 def run_case3():
     print("Iniciando investigação do caso 3...")
     time.sleep(3)
@@ -64,8 +64,6 @@ def run_case3():
     1. Verificar validação de credenciais
     2. Testar combinações de login e senha
     """
-
-
 
 #diagnóstico
     investigacao = 0

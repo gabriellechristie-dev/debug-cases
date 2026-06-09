@@ -1,6 +1,6 @@
 import time
 
-#narrativa inicial: loop infinito
+#narrativa inicial
 def run_case2():
     print("Iniciando investigação do caso 2...")
     time.sleep(3)
@@ -28,7 +28,7 @@ def run_case2():
 
     """
 
-    #output/comportamento observado
+#output/comportamento observado
     output = """ Output/comportamento observado:
     Digite o número do pedido que deseja processar: 101
     Pedido processado com sucesso
@@ -47,13 +47,13 @@ def run_case2():
     print(output)
     time.sleep(3)
 
-    #investigações
+#investigações
     menu_case2 = """ Menu de Pistas
     1. Verificar contador de pedidos
     2. Monitorar encerramento do sistema
     """
 
-    #diagnóstico
+#diagnóstico
     investigacao = 0
     while investigacao < 2:
         print(menu_case2)
@@ -67,8 +67,7 @@ def run_case2():
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")
 
-
-    #resultado final
+#resultado final
     menu_decisao_final2 = """
     1. O contador de pedidos não está sendo atualizado corretamente
     2. A condição do while está escrita incorretamente.

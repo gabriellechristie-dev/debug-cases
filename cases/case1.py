@@ -14,7 +14,7 @@ def run_case1():
     print("Sua missão é investigar o código e identificar o bug responsável pelo desaparecimento dos saldos...")
     time.sleep(4)
 
-    #código bugado
+#código bugado
     codigo_bugado1 = """Código Bugado para análise:
     saldo_inicial = 100
     valor_deposito = 50
@@ -28,7 +28,7 @@ def run_case1():
     print("Saldo após depósito:", resultado)
     """
 
-    #output/comportamento observado
+#output/comportamento observado
     output = """ Output/comportamento observado:
     "Saldo após depósito: 50"
     """
@@ -37,13 +37,13 @@ def run_case1():
     print(output)
     time.sleep(3)
 
-    #investigações
+#investigações
     menu_case1 = """ Menu de Pistas
     1. Analisar variável saldo  
     2. Testar depósito
     """ 
 
-    #diagnóstico
+#diagnóstico
     investigacao = 0
     while investigacao < 2:
         print(menu_case1)
@@ -57,7 +57,7 @@ def run_case1():
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")
 
-    #resultado final
+#resultado final
     menu_decisao_final = """
     1. A variável saldo está sendo reinicializada dentro da função
     2. O sistema está exibindo o resultado incorretamente
