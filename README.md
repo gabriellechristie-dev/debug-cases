@@ -66,7 +66,7 @@ Descubra por que boletins não estão sendo gerados mesmo com a funcionalidade i
 
 ---
 
-## ▶️ Como Executar
+##  Como Executar
 
 1. Clone este repositório:
 
@@ -88,7 +88,7 @@ python main.py
 
 ---
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```text
 debug-cases/
@@ -106,7 +106,7 @@ debug-cases/
 
 ---
 
-## 📚 Conceitos Praticados
+##  Conceitos Praticados
 
 * Variáveis
 * Loops
@@ -121,7 +121,7 @@ debug-cases/
 
 ---
 
-## 🎓 Aprendizados
+##  Aprendizados
 
 Durante o desenvolvimento deste projeto foram praticados:
 
@@ -134,7 +134,7 @@ Durante o desenvolvimento deste projeto foram praticados:
 
 ---
 
-## 📌 Status do Projeto
+##  Status do Projeto
 
 Em desenvolvimento final!
 
