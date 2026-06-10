@@ -2,20 +2,20 @@ import time
 
 #narrativa inicial
 def run_case2():
-    print("Iniciando investigação do caso 2...")
-    time.sleep(3)
-
-    print("Uma empresa relatou que o sistema de processamento de pedidos ficou preso executando indefinidamente...")
-    time.sleep(3)
-
-    print("Os pedidos deveriam ser processados e o programa encerrado após concluir o trabalho...")
-    time.sleep(3)
+    titulo_caso = "Caso 2 - Loop Infinito"
     
-    print("No entanto, o sistema continua executando sem parar, nunca chegando a mostrar a mensagem de processamento final de todos os pedidos...")
-    time.sleep(4)
+    narrativa = """
+    Uma empresa relatou que o sistema de processamento de pedidos ficou preso executando indefinidamente...
+    Os pedidos deveriam ser processados e o programa encerrado após concluir o trabalho...
+    No entanto, o sistema continua executando sem parar, nunca chegando a mostrar a mensagem de processamento final de todos os pedidos
+                """
+    print(titulo_caso)
+    time.sleep(1.5)
+    print(narrativa)
+    time.sleep(1.5)
 
     #código bugado
-    codigo_bugado2 = """Código Bugado para análise:
+    codigo_bugado = """Código Bugado para análise:
     
     pedidos_processados = 0
 
@@ -29,7 +29,7 @@ def run_case2():
     """
 
 #output/comportamento observado
-    output = """ Output/comportamento observado:
+    output_observado = """ Output/comportamento observado:
     Digite o número do pedido que deseja processar: 101
     Pedido processado com sucesso
 
@@ -42,13 +42,13 @@ def run_case2():
     Digite o número do pedido que deseja processar: 104
     Pedido processado com sucesso
 """
-    print(codigo_bugado2)
+    print(codigo_bugado)
     time.sleep(2)
-    print(output)
-    time.sleep(3)
+    print(output_observado)
+    time.sleep(2)
 
 #investigações
-    menu_case2 = """ Menu de Pistas
+    menu_investigacao = """ Menu de Pistas
     1. Verificar contador de pedidos
     2. Monitorar encerramento do sistema
     """
@@ -56,7 +56,7 @@ def run_case2():
 #diagnóstico
     investigacao = 0
     while investigacao < 2:
-        print(menu_case2)
+        print(menu_investigacao)
         escolha = input("Escolha uma opção para investigar: ")  
         if escolha == "1":
             print("A quantidade de pedidos processados parece permanecer a mesma durante a execução.")
@@ -68,20 +68,20 @@ def run_case2():
             print("Opção inválida. Por favor, escolha uma opção válida.")
 
 #resultado final
-    menu_decisao_final2 = """
+    menu_decisao_final = """
     1. O contador de pedidos não está sendo atualizado corretamente
     2. A condição do while está escrita incorretamente.
 
     """
 
-    print(menu_decisao_final2)
+    print(menu_decisao_final)
 
 
-    decisao_final2 = input("Qual é a causa do bug? ")
-    if decisao_final2 == "1":
+    decisao_final = input("Qual é a causa do bug? ")
+    if decisao_final == "1":
         print("Correto! O contador de pedidos não está sendo atualizado durante a execução. Como seu valor permanece 0, a condição de parada nunca é alcançada e o loop continua indefinidamente.")
         return True
-    elif decisao_final2 == "2":
+    elif decisao_final == "2":
         print("Incorreto. A condição do while está escrita corretamente. O problema é que a variável utilizada na condição não é atualizada durante a execução.")
         return False
     else:   

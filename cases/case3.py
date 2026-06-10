@@ -2,23 +2,21 @@ import time
 
 #narrativa inicial
 def run_case3():
-    print("Iniciando investigação do caso 3...")
-    time.sleep(3)
+    titulo_caso = "Caso 3 - Login com Falha"
 
-    print("Uma empresa relatou falhas no sistema de autenticação de usuários...")
-    time.sleep(3)
-
-    print("Apenas usuários com login e senha válidos deveriam conseguir acessar o sistema...")
-    time.sleep(3)
-
-    print("No entanto, pessoas sem as credenciais corretas estão conseguindo entrar normalmente...")
-    time.sleep(3)
-
-    print("Sua missão é investigar o código e descobrir por que o sistema está liberando acessos indevidos.")
-    time.sleep(4)
+    narrativa = """
+    Uma empresa relatou falhas no sistema de autenticação de usuários...
+    Somente os usuários com login e senha válidos deveriam conseguir acessar o sistema...
+    No entanto, pessoas sem as credenciais corretas estão conseguindo entrar normalmente...
+    Sua missão é investigar o código e descobrir por que o sistema está liberando acessos indevidos.
+                """
+    print(titulo_caso)
+    time.sleep(1.5)
+    print(narrativa)
+    time.sleep(1.5)
 
 #código bugado
-    codigo_bugado3 = """Código Bugado para análise:
+    codigo_bugado = """Código Bugado para análise:
     
     usuario_digitado = input(“Digite seu usuário(Apenas letras): ”)
     senha_digitada = input(“Digite sua senha(Apenas números): ”)
@@ -34,7 +32,7 @@ def run_case3():
     """
 
 #output/comportamento observado 
-    output = """ Tentativa 1:
+    output_observado = """ Tentativa 1:
     Usuário: admin
     Senha: 9999
 
@@ -54,13 +52,13 @@ def run_case3():
 
     Acesso liberado!
     """
-    print(codigo_bugado3)
+    print(codigo_bugado)
     time.sleep(2)
-    print(output)
-    time.sleep(3)
+    print(output_observado)
+    time.sleep(2)
 
 #investigações
-    menu_case3 = """ Menu de Pistas:
+    menu_investigacao = """ Menu de Pistas:
     1. Verificar validação de credenciais
     2. Testar combinações de login e senha
     """
@@ -68,7 +66,7 @@ def run_case3():
 #diagnóstico
     investigacao = 0
     while investigacao < 2:
-        print(menu_case3)
+        print(menu_investigacao)
         escolha = input("Escolha uma opção para investigar: ")  
         if escolha == "1":
             print("A autenticação parece ser aprovada mesmo quando apenas uma das credenciais está correta.")
@@ -81,19 +79,19 @@ def run_case3():
 
 #resultado final
 
-    menu_decisao_final3 = """
+    menu_decisao_final = """
     1. O operador lógico utilizado na validação está incorreto.
     2. A senha cadastrada está armazenada incorretamente.
     """
 
-    print(menu_decisao_final3)
+    print(menu_decisao_final)
 
 
-    decisao_final3 = input("Qual é a causa do bug? ")
-    if decisao_final3 == "1":
+    decisao_final = input("Qual é a causa do bug? ")
+    if decisao_final == "1":
         print("Correto! O sistema utiliza OR na validação em vez de AND. Dessa forma, basta que o usuário ou a senha estejam corretos para que o acesso seja liberado. O correto seria exigir que ambas as credenciais fossem válidas.")
         return True
-    elif decisao_final3 == "2":
+    elif decisao_final == "2":
         print("Incorreto! A senha está sendo comparada corretamente. O problema está na lógica utilizada para validar as credenciais.")
         return False
     else:   

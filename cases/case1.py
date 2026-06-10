@@ -2,20 +2,20 @@ import time
 
 #narrativa inicial
 def run_case1(): 
-    print("Iniciando investigação do caso 1...")
-    time.sleep(3)
+    titulo_caso = "Caso 1 - Sistema Bancário"
 
-    print("O banco recebeu diversos relatos de clientes afirmando que seus saldos desapareciam após operações de depósito e saque...")
-    time.sleep(3)
-
-    print("Os valores pareciam ser redefinidos de forma inesperada, comprometendo a integridade do sistema financeiro...")
-    time.sleep(3)
-    
-    print("Sua missão é investigar o código e identificar o bug responsável pelo desaparecimento dos saldos...")
-    time.sleep(4)
+    narrativa = """
+    Um banco recebeu diversos relatos de clientes afirmando que seus saldos desapareciam após operações de depósito e saque...
+    Os valores pareciam ser redefinidos de forma inesperada, comprometendo a integridade do sistema financeiro...
+    Sua missão é investigar o código e identificar o bug responsável pelo desaparecimento dos saldos...
+                """
+    print(titulo_caso)
+    time.sleep(1.5)
+    print(narrativa)
+    time.sleep(1.5)
 
 #código bugado
-    codigo_bugado1 = """Código Bugado para análise:
+    codigo_bugado = """Código Bugado para análise:
     saldo_inicial = 100
     valor_deposito = 50
 
@@ -29,16 +29,16 @@ def run_case1():
     """
 
 #output/comportamento observado
-    output = """ Output/comportamento observado:
+    output_observado = """ Output/comportamento observado:
     "Saldo após depósito: 50"
     """
-    print(codigo_bugado1)
+    print(codigo_bugado)
     time.sleep(2)
-    print(output)
-    time.sleep(3)
+    print(output_observado)
+    time.sleep(2)
 
 #investigações
-    menu_case1 = """ Menu de Pistas
+    menu_investigacao = """ Menu de Pistas
     1. Analisar variável saldo  
     2. Testar depósito
     """ 
@@ -46,7 +46,7 @@ def run_case1():
 #diagnóstico
     investigacao = 0
     while investigacao < 2:
-        print(menu_case1)
+        print(menu_investigacao)
         escolha = input("Escolha uma opção para investigar: ")  
         if escolha == "1":
             print("O valor armazenado no saldo parece não permanecer após a operação.")
