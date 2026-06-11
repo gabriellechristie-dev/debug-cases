@@ -1,4 +1,5 @@
 import time
+from visual import mostrar_titulo, mostrar_narrativa, mostrar_codigo, mostrar_output, mostrar_pistas, mostrar_diagnostico
 
 #narrativa inicial:
 def run_case4():
@@ -16,7 +17,7 @@ def run_case4():
     time.sleep(1.5)
 
 #código bugado
-    codigo_bugado = """Código Bugado para análise:
+    codigo_bugado = """
 
 
     lista_de_alunos = ["Maria", "João", "Ana"]
@@ -33,7 +34,8 @@ def run_case4():
     """
 
 #output/comportamento observado 
-    output_observado = """ Lista de alunos antes da atualização:
+    output_observado = """ 
+    Lista de alunos antes da atualização:
     ["Maria", "João", "Ana"]
 
     Lista de alunos após a atualização:
@@ -45,7 +47,7 @@ def run_case4():
     time.sleep(2)
 
 #investigações
-    menu_investigacao = """ Menu de Pistas:
+    menu_investigacao = """
     1. Verificar quantidade de alunos cadastrados
     2. Analisar lista após a atualização
     """ 

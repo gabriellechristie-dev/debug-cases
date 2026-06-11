@@ -1,4 +1,5 @@
 import time
+from visual import mostrar_titulo, mostrar_narrativa, mostrar_codigo, mostrar_output, mostrar_pistas, mostrar_diagnostico
 
 #narrativa inicial
 def run_case3():
@@ -16,7 +17,7 @@ def run_case3():
     time.sleep(1.5)
 
 #código bugado
-    codigo_bugado = """Código Bugado para análise:
+    codigo_bugado = """
     
     usuario_digitado = input(“Digite seu usuário(Apenas letras): ”)
     senha_digitada = input(“Digite sua senha(Apenas números): ”)
@@ -32,7 +33,8 @@ def run_case3():
     """
 
 #output/comportamento observado 
-    output_observado = """ Tentativa 1:
+    output_observado = """ 
+    Tentativa 1:
     Usuário: admin
     Senha: 9999
 
@@ -58,7 +60,7 @@ def run_case3():
     time.sleep(2)
 
 #investigações
-    menu_investigacao = """ Menu de Pistas:
+    menu_investigacao = """
     1. Verificar validação de credenciais
     2. Testar combinações de login e senha
     """

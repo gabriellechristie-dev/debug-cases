@@ -1,4 +1,5 @@
 import time
+from visual import mostrar_titulo, mostrar_narrativa, mostrar_codigo, mostrar_output, mostrar_pistas, mostrar_diagnostico
 
 #narrativa inicial
 def run_case2():
@@ -9,14 +10,13 @@ def run_case2():
     Os pedidos deveriam ser processados e o programa encerrado após concluir o trabalho...
     No entanto, o sistema continua executando sem parar, nunca chegando a mostrar a mensagem de processamento final de todos os pedidos
                 """
-    print(titulo_caso)
+    mostrar_titulo(titulo_caso)
     time.sleep(1.5)
-    print(narrativa)
+    mostrar_narrativa(narrativa)
     time.sleep(1.5)
 
     #código bugado
-    codigo_bugado = """Código Bugado para análise:
-    
+    codigo_bugado = """
     pedidos_processados = 0
 
     while pedidos_processados < 50:
@@ -29,7 +29,7 @@ def run_case2():
     """
 
 #output/comportamento observado
-    output_observado = """ Output/comportamento observado:
+    output_observado = """
     Digite o número do pedido que deseja processar: 101
     Pedido processado com sucesso
 
@@ -42,13 +42,13 @@ def run_case2():
     Digite o número do pedido que deseja processar: 104
     Pedido processado com sucesso
 """
-    print(codigo_bugado)
+    mostrar_codigo(codigo_bugado)
     time.sleep(2)
-    print(output_observado)
+    mostrar_output(output_observado)
     time.sleep(2)
 
 #investigações
-    menu_investigacao = """ Menu de Pistas
+    menu_investigacao = """
     1. Verificar contador de pedidos
     2. Monitorar encerramento do sistema
     """
@@ -56,7 +56,7 @@ def run_case2():
 #diagnóstico
     investigacao = 0
     while investigacao < 2:
-        print(menu_investigacao)
+        mostrar_pistas(menu_investigacao)
         escolha = input("Escolha uma opção para investigar: ")  
         if escolha == "1":
             print("A quantidade de pedidos processados parece permanecer a mesma durante a execução.")
@@ -74,7 +74,8 @@ def run_case2():
 
     """
 
-    print(menu_decisao_final)
+    mostrar_diagnostico(menu_decisao_final)
+
 
 
     decisao_final = input("Qual é a causa do bug? ")

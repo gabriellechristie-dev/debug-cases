@@ -1,5 +1,5 @@
 import time
-
+from visual import mostrar_titulo, mostrar_narrativa, mostrar_codigo, mostrar_output, mostrar_pistas, mostrar_diagnostico
 
 #narrativa inicial
 def run_case5():
@@ -17,7 +17,7 @@ def run_case5():
     time.sleep(1.5)
 
 #código bugado
-    codigo_bugado = """---Código Bugado para análise---
+    codigo_bugado = """
     def gerar_boletim():
 
         print("Boletim gerado com sucesso")
@@ -43,7 +43,7 @@ def run_case5():
 
 
 #investigações
-    menu_investigacao = """ Menu de Pistas:
+    menu_investigacao = """
     1. Verificar execução da função de boletim
     2. Analisar mensagens exibidas pelo sistema
     """

@@ -1,4 +1,5 @@
 import time
+from visual import mostrar_titulo, mostrar_narrativa, mostrar_codigo, mostrar_output, mostrar_pistas, mostrar_diagnostico
 
 #narrativa inicial
 def run_case1(): 
@@ -9,13 +10,13 @@ def run_case1():
     Os valores pareciam ser redefinidos de forma inesperada, comprometendo a integridade do sistema financeiro...
     Sua missão é investigar o código e identificar o bug responsável pelo desaparecimento dos saldos...
                 """
-    print(titulo_caso)
+    mostrar_titulo(titulo_caso)
     time.sleep(1.5)
-    print(narrativa)
+    mostrar_narrativa(narrativa)
     time.sleep(1.5)
 
 #código bugado
-    codigo_bugado = """Código Bugado para análise:
+    codigo_bugado = """
     saldo_inicial = 100
     valor_deposito = 50
 
@@ -29,16 +30,16 @@ def run_case1():
     """
 
 #output/comportamento observado
-    output_observado = """ Output/comportamento observado:
+    output_observado = """ 
     "Saldo após depósito: 50"
     """
-    print(codigo_bugado)
+    mostrar_codigo(codigo_bugado)
     time.sleep(2)
-    print(output_observado)
+    mostrar_output(output_observado)
     time.sleep(2)
 
 #investigações
-    menu_investigacao = """ Menu de Pistas
+    menu_investigacao = """ 
     1. Analisar variável saldo  
     2. Testar depósito
     """ 
@@ -46,7 +47,7 @@ def run_case1():
 #diagnóstico
     investigacao = 0
     while investigacao < 2:
-        print(menu_investigacao)
+        mostrar_pistas(menu_investigacao)
         escolha = input("Escolha uma opção para investigar: ")  
         if escolha == "1":
             print("O valor armazenado no saldo parece não permanecer após a operação.")
@@ -64,7 +65,7 @@ def run_case1():
 
     """
 
-    print(menu_decisao_final)
+    mostrar_diagnostico(menu_decisao_final)
 
     
     decisao_final = input("Qual é a causa do bug? ")
