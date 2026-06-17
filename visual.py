@@ -35,7 +35,7 @@ def mostrar_codigo(codigo_bugado):
 def mostrar_output(output_observado):
     console.print("")
     console.print("")
-    rule = Rule(title="🖥 COMPORTAMENTO OBSERVADO", style = "green")
+    rule = Rule(title="🖥 COMPORTAMENTO OBSERVADO", style = "yellow")
     console.print(rule)
     console.print(output_observado)
 
@@ -44,7 +44,7 @@ def mostrar_output(output_observado):
 def mostrar_pistas(menu_investigacao):
     console.print("")
     console.print("")
-    rule = Rule(title="🔍 PISTAS DISPONÍVEIS", style = "yellow")
+    rule = Rule(title="🔍 PISTAS DISPONÍVEIS", style = "magenta")
     console.print(rule)
     console.print(menu_investigacao)
 
@@ -65,10 +65,13 @@ Hoje a sua missão é analisar sistemas defeituosos,
 coletar pistas e descobrir a causa dos bugs!""" 
 
     opcoes = """
-1.▶ Iniciar Investigação
-2.✖ Sair """
+1.Iniciar Investigação
+2.Sair """
     
     panel = Panel(Align.center(cabecalho), box.DOUBLE)
     console.print(panel)
     console.print(boas_vindas)
     console.print(opcoes)
+
+
+    panel = Panel("💡 PISTA ENCONTRADA \n\n O valor armazenado no saldo parece não permanecer após a operação.", box.SIMPLE, expand = False)

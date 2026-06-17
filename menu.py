@@ -8,7 +8,7 @@ def menu():
     
     mostrar_tela_inicial()
     console.print("")
-    choice = IntPrompt.ask("🎮 Escolha uma opção: ")
+    choice = IntPrompt.ask("Escolha uma opção: ")
     
     return choice
 
