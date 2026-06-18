@@ -1,5 +1,0 @@
-{
-    "CodeGPT.apiKey": "OpenAI",
-    "github.copilot.chat.anthropic.useMessagesApi": false,
-    "genieai.openai.apiBaseUrl": ""
-}

@@ -52,7 +52,7 @@ def mostrar_pistas(menu_investigacao):
 def mostrar_diagnostico(menu_decisao_final):
     console.print("")
     console.print("")
-    rule = Rule(title="⚠ DIAGNÓSTICO FINAL" , style = "red")
+    rule = Rule(title="🕵 DIAGNÓSTICO FINAL" , style = "red")
     console.print(rule)
     console.print(menu_decisao_final)
 
