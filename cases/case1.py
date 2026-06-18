@@ -1,9 +1,13 @@
 import time
 from visual import mostrar_titulo, mostrar_narrativa, mostrar_codigo, mostrar_output, mostrar_pistas, mostrar_diagnostico
+from rich.console import Console
+
+
+console = Console()
 
 #narrativa inicial
 def run_case1(): 
-    print("")
+    console.print("")
     caso = """📂 CASO 1"""
     titulo_caso = "Sistema Bancário"
 
@@ -13,9 +17,9 @@ Os valores pareciam ser redefinidos de forma inesperada, comprometendo a integri
 Sua missão é investigar o código e identificar o bug responsável pelo desaparecimento dos saldos...
                 """
     mostrar_titulo(titulo_caso, caso)
-    time.sleep(1.5)
+    time.sleep(2)
     mostrar_narrativa(narrativa)
-    time.sleep(1.5)
+    time.sleep(4)
 
 #código bugado
     codigo_bugado = """
@@ -36,7 +40,7 @@ Sua missão é investigar o código e identificar o bug responsável pelo desapa
     "Saldo após depósito: 50"
     """
     mostrar_codigo(codigo_bugado)
-    time.sleep(2)
+    time.sleep(3)
     mostrar_output(output_observado)
     time.sleep(2)
 
@@ -53,40 +57,51 @@ Sua missão é investigar o código e identificar o bug responsável pelo desapa
     while pista_vista1 == False or pista_vista2 == False:
         
         escolha = int(input("Escolha uma opção para investigar: "))
-        print("")
+        console.print("")
+        time.sleep(2)
         if escolha == 1:
             if pista_vista1 == True:
-                print("⚠ Você já investigou essa pista.")
+                console.print("⚠ Você já investigou essa pista.", style ="blink yellow")
+                console.print("")
+                time.sleep(2)
             else:
-                print("💡 PISTA ENCONTRADA \n\n O valor armazenado no saldo parece não permanecer após a operação.")
-                print("")
+                console.print("━━━━━━━━━━ 💡 PISTA ENCONTRADA ━━━━━━━━━━\n➜ O valor armazenado no saldo parece não permanecer após a operação.", style ="bold cyan")
+                console.print("")
+                time.sleep(2)
                 pista_vista1 = True
         
         elif escolha == 2:
             if pista_vista2 == True:
-                print("⚠ Você já investigou essa pista.")
+                console.print("⚠ Você já investigou essa pista.", style ="blink yellow")
+                console.print("")
+                time.sleep(2)
             else:
-                print("💡 PISTA ENCONTRADA \n\n O valor final corresponde apenas ao último depósito realizado.")
+                console.print("━━━━━━━━━━ 💡 PISTA ENCONTRADA ━━━━━━━━━━\n➜ O valor final corresponde apenas ao último depósito realizado.", style ="bold cyan")
                 pista_vista2 = True
+                time.sleep(2)
         else:
-            print("Por favor, escolha a opção 1 ou 2!")
-            
+            console.print("Por favor, escolha a opção 1 ou 2!")
+            console.print("")
+
 #resultado final
     menu_decisao_final = """1. A variável saldo está sendo reinicializada dentro da função
 2. O sistema está exibindo o resultado incorretamente
 
     """
-
+    
     mostrar_diagnostico(menu_decisao_final)
 
     
     decisao_final = int(input("Qual é a causa do bug? "))
+    time.sleep(2)
     if decisao_final == 1:
-        print("━━━━━━━━━━ ✅ DIAGNÓSTICO CONFIRMADO ━━━━━━━━━━ \n Causa do bug: \n A variável saldo está sendo reinicializada dentro da função,substituindo o valor anterior pelo valor do depósito. \n 🏆 Caso encerrado com sucesso.")
+        console.print("━━━━━━━━━━ ✅ CASO RESOLVIDO ━━━━━━━━━━\n\nCAUSA IDENTIFICADA\n\nA variável saldo está sendo reinicializada dentro da função, substituindo o valor anterior pelo valor do depósito.\n\n🏆 Caso encerrado com sucesso.", style ="blink green")
+        time.sleep(2)
         return True
     elif decisao_final == 2:
-        print("━━━━━━━━━━ ❌ DIAGNÓSTICO INCORRETO ━━━━━━━━━━\n A hipótese escolhida não explica o comportamento observado.")
+        console.print("━━━━━━━━━━ ❌ DIAGNÓSTICO INCORRETO ━━━━━━━━━━\n\nA hipótese escolhida não explica o comportamento observado.\n\n🔄 Reiniciando investigação...", style="blink red")
+        time.sleep(2)
         return False
     else:   
-        print("Opção inválida. Por favor, escolha uma opção válida.")
+        console.print("Opção inválida. Por favor, escolha uma opção válida.")
         return False
