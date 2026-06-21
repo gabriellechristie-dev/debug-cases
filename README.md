@@ -1,5 +1,8 @@
 # 🕵️ Debug Cases
 
+<img width="1101" height="569" alt="Captura de Tela (77)" src="https://github.com/user-attachments/assets/cf6a4b6b-52ce-4fe2-a235-2c551e3979a0" />
+
+
 Um jogo de investigação de bugs desenvolvido em Python.
 
 Neste projeto, o jogador assume o papel de um investigador responsável por analisar sistemas com falhas, coletar pistas e identificar a causa de diferentes bugs encontrados no código.
@@ -63,6 +66,7 @@ Descubra por que boletins não estão sendo gerados mesmo com a funcionalidade i
 ## 🛠️ Tecnologias Utilizadas
 
 * Python 3
+* Biblioteca Rich
 
 ---
 
@@ -94,6 +98,7 @@ python main.py
 debug-cases/
 │
 ├── main.py
+|__ visual.py
 ├── menu.py
 │
 └── cases/
@@ -136,7 +141,7 @@ Durante o desenvolvimento deste projeto foram praticados:
 
 ##  Status do Projeto
 
-Em desenvolvimento final!
+Concluído!
 
 Projeto desenvolvido para fins de estudo e prática de programação em Python.
 
