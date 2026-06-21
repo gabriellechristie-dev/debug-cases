@@ -2,6 +2,9 @@ import menu
 import time
 from cases import case1, case2, case3, case4, case5
 from rich.console import Console
+from rich import box
+from rich.panel import Panel
+from rich.align import Align
 
 console = Console()
 
@@ -55,14 +58,13 @@ while True:
        
         time.sleep(2)
 
-        print("===================================")
-        print("CASO ENCERRADO")
-        print("===================================")
-        print("Parabéns, Investigador!")
-        print("Você solucionou todos os casos de debug da campanha.")
-        print("Variáveis, loops, condicionais, listas e funções não são mais um mistério para você.")
-        print("Todos os sistemas foram restaurados com sucesso.")
-        print("===================================")
+        console.print("")
+        console.print("")
+        mensagem_final = ("CASOS ENCERRADOS\nParabéns, Investigador!\nVocê solucionou todos os casos de debug da campanha\nVariáveis, loops, condicionais, listas e funções não são mais um mistério para você.\nTodos os sistemas foram restaurados com sucesso.")
+        panel = Panel(Align.center(mensagem_final), box.HEAVY)
+        console.print(panel, style = "blink cyan")
+        console.print("")
+        console.print("")
         time.sleep(2)
 
     elif choice == 2:
