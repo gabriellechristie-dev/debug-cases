@@ -94,7 +94,7 @@ else:
                 console.print("")
                 time.sleep(2)
             else:
-                console.print("━━━━━━━━━━ 💡 PISTA ENCONTRADA ━━━━━━━━━━\n➜Usuários conseguem acessar o sistema mesmo informando login ou senha incorretos.", style ="bold cyan")
+                console.print("━━━━━━━━━━ 💡 PISTA ENCONTRADA ━━━━━━━━━━\n➜ Usuários conseguem acessar o sistema mesmo informando login ou senha incorretos.", style ="bold cyan")
                 pista_vista2 = True
                 time.sleep(2)
         else:
