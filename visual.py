@@ -17,7 +17,7 @@ def mostrar_titulo(titulo_caso,caso):
 def mostrar_narrativa(narrativa):
     console.print("")
     console.print("")
-    rule = Rule( title="📋 RELATÓRIO DO CASO")
+    rule = Rule( title="RELATÓRIO DO CASO")
     console.print(rule)
     console.print(narrativa)
     
@@ -26,7 +26,7 @@ def mostrar_narrativa(narrativa):
 def mostrar_codigo(codigo_bugado):
     console.print("")
     console.print("")
-    rule =  Rule(title="💻 CÓDIGO SUSPEITO")
+    rule =  Rule(title="CÓDIGO SUSPEITO")
     syntax = Syntax(codigo_bugado, "python")
     console.print(rule)
     console.print(syntax)
@@ -35,7 +35,7 @@ def mostrar_codigo(codigo_bugado):
 def mostrar_output(output_observado):
     console.print("")
     console.print("")
-    rule = Rule(title="🖥 COMPORTAMENTO OBSERVADO")
+    rule = Rule(title="COMPORTAMENTO OBSERVADO")
     console.print(rule)
     console.print(output_observado)
 
@@ -44,7 +44,7 @@ def mostrar_output(output_observado):
 def mostrar_pistas(menu_investigacao):
     console.print("")
     console.print("")
-    rule = Rule(title="🔍 PISTAS DISPONÍVEIS")
+    rule = Rule(title="PISTAS DISPONÍVEIS")
     console.print(rule)
     console.print(menu_investigacao)
 
@@ -52,7 +52,7 @@ def mostrar_pistas(menu_investigacao):
 def mostrar_diagnostico(menu_decisao_final):
     console.print("")
     console.print("")
-    rule = Rule(title="🕵 DIAGNÓSTICO FINAL")
+    rule = Rule(title="DIAGNÓSTICO FINAL")
     console.print(rule)
     console.print(menu_decisao_final)
 

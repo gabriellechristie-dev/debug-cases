@@ -1,7 +1,7 @@
 import time
 from visual import mostrar_titulo, mostrar_narrativa, mostrar_codigo, mostrar_output, mostrar_pistas, mostrar_diagnostico
 from rich.console import Console
-
+from textwrap import dedent
 
 console = Console()
 
@@ -22,17 +22,17 @@ No entanto, o sistema continua executando sem parar, nunca chegando a mostrar a 
     time.sleep(4)
 
 #código bugado
-    codigo_bugado = """
-    pedidos_processados = 0
+    codigo_bugado = dedent("""
+pedidos_processados = 0
 
-    while pedidos_processados < 50:
-        pedido = int(input("Digite o número do pedido que deseja processar:"))
+while pedidos_processados < 50:
+    pedido = int(input("Digite o número do pedido que deseja processar:"))
        
         print("Pedido processado com sucesso")
 
-    print("Todos os pedidos foram processados com sucesso")
+print("Todos os pedidos foram processados com sucesso")
 
-    """
+""")
 
 #output/comportamento observado
     output_observado = """
@@ -103,6 +103,7 @@ Pedido processado com sucesso
 
 
     decisao_final = input("Qual é a causa do bug? ")
+    time.sleep(2)
     if decisao_final == "1":
         console.print("━━━━━━━━━━ ✅ CASO RESOLVIDO ━━━━━━━━━━\n\nCAUSA IDENTIFICADA\n\nO contador de pedidos não está sendo atualizado durante a execução. Como seu valor permanece 0, a condição de parada nunca é alcançada e o loop continua indefinidamente.\n\n🏆 Caso encerrado com sucesso.", style ="blink green")
         time.sleep(2)

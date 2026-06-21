@@ -1,7 +1,7 @@
 import time
 from visual import mostrar_titulo, mostrar_narrativa, mostrar_codigo, mostrar_output, mostrar_pistas, mostrar_diagnostico
 from rich.console import Console
-
+from textwrap import dedent
 
 console = Console()
 
@@ -22,18 +22,18 @@ Sua missão é investigar o código e identificar o bug responsável pelo desapa
     time.sleep(4)
 
 #código bugado
-    codigo_bugado = """
-    saldo_inicial = 100
-    valor_deposito = 50
+    codigo_bugado = dedent("""
+saldo_inicial = 100
+valor_deposito = 50
 
-    def depositar(saldo, valor):
-        saldo = valor
-        return saldo
+def depositar(saldo, valor):
+    saldo = valor
+    return saldo
 
     resultado = depositar(saldo_inicial, valor_deposito)
 
-    print("Saldo após depósito:", resultado)
-    """
+print("Saldo após depósito:", resultado)
+""")
 
 #output/comportamento observado
     output_observado = """ 
@@ -65,7 +65,7 @@ Sua missão é investigar o código e identificar o bug responsável pelo desapa
                 console.print("")
                 time.sleep(2)
             else:
-                console.print("━━━━━━━━━━ 💡 PISTA ENCONTRADA ━━━━━━━━━━\n➜ O valor armazenado no saldo parece não permanecer após a operação.", style ="bold cyan")
+                console.print("━━━━━━━━━━ 💡 PISTA ENCONTRADA ━━━━━━━━━━\n➜ O valor armazenado no saldo parece não permanecer após a operação.", style="bold cyan")
                 console.print("")
                 time.sleep(2)
                 pista_vista1 = True
@@ -76,7 +76,7 @@ Sua missão é investigar o código e identificar o bug responsável pelo desapa
                 console.print("")
                 time.sleep(2)
             else:
-                console.print("━━━━━━━━━━ 💡 PISTA ENCONTRADA ━━━━━━━━━━\n➜ O valor final corresponde apenas ao último depósito realizado.", style ="bold cyan")
+                console.print("━━━━━━━━━━ 💡 PISTA ENCONTRADA ━━━━━━━━━━\n➜ O valor final corresponde apenas ao último depósito realizado.", style="bold cyan")
                 pista_vista2 = True
                 time.sleep(2)
         else:
