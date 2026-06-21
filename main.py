@@ -1,6 +1,9 @@
 import menu
 import time
 from cases import case1, case2, case3, case4, case5
+from rich.console import Console
+
+console = Console()
 
 while True:
     choice = menu.menu()
